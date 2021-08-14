@@ -54,5 +54,6 @@ library(dplyr)
 
 TidyDS<-group_by(DataAll2, activity,subject)
 TidyDS<-summarise_all(TidyDS, mean)
+TidyDS$symbol<-NULL
 
 write.table(TidyDS, file = "TidyDataset.txt",row.name=FALSE)
